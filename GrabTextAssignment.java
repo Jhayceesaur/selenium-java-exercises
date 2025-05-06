@@ -31,6 +31,9 @@ public class GrabTextAssignment
 		Actions a = new Actions(driver);
 		WebElement inputText = driver.findElement(By.name("enter-name"));
 		a.moveToElement(inputText).click().sendKeys(labelText).build().perform();
+
+		//Another simple syntax to input stored value in a text field
+		//driver.findElement(By.name("enter-name")).sendKeys(labelText);
 		
 		//Verify if alert message contains the checkbox label
 		driver.findElement(By.id("alertbtn")).click();
